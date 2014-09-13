@@ -1,11 +1,11 @@
-var eqq = new function() {
+﻿var eqq = new function() {
 	this.msgQueue = [];
 	this.msgFilters = [];
 	var tid = 0;
 	var self = this;
 	this.start = function(interval) {
 		interval = interval || 2000;
-		if (typeof EQQ == 'undefined') {
+		if (typeof EQQ == "undefined") {
 			alert("login web qq first.");
 		} else {
 			attachQQMsgObserver(true);
@@ -15,7 +15,7 @@ var eqq = new function() {
 	};
 
 	this.stop = function() {
-		if (typeof EQQ == 'undefined') {
+		if (typeof EQQ == "undefined") {
 			return;
 		} else {
 			attachQQMsgObserver(false);

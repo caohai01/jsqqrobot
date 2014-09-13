@@ -92,7 +92,7 @@
 
 	//var msg = {type:msgType, from:msg.from_uin, msgText:msgText};
 	function telFilter(msg) {
-		var reTel = /[\s|：]*?(.{2,4}?)(?:.老师)?的?(?:[电话|手机|联系])号??码??/gmi;
+		var reTel = /[\s|：]*?(.{2,4}?)(?:老师)?的?(?:电话|手机|联系)号??码??/gmi;
 		if(msg.msgText.match(reTel))
 			msg.msgText = RegExp.$1;
 		return false;
@@ -107,7 +107,7 @@
 		alert("请先登录webqq.");
 		window.location.reload();
 	} else {
-		loadjs("http://js.chinacloudsites.cn/robot2/eqq.js", "eqqrobot",
+		loadjs("http://yourhost/eqq.js", "eqqrobot",
 		function() {
 			if (typeof eqq == "undefined") {
 				alert("QQ机器人加载失败! 刷新后重试。");
@@ -118,4 +118,4 @@
 			}
 		});
 	}
-})("yourkey_ontuling123_32bit");
+})("yourkey_on_www.tuling123.com_32");
